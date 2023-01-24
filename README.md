@@ -1,7 +1,7 @@
 # Mano-machine
 Verilog code for mano machine CPU.
 
-<https://en.wikipedia.org/wiki/Mano_machine>
+For more detail about Mano-machine : <https://en.wikipedia.org/wiki/Mano_machine>
 
 - Mano-machine is a CPU for education.
 
