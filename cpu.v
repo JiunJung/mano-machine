@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 0.1ns / 1ps
 
 module cpu
 #(
@@ -22,9 +22,10 @@ reg [3:0] SC;
 reg [15:0] r_data_out;
 //define reg done.
 
-//assign here.
+//assign here. make sure that you have to assign your output and reg.
 assign we_n = r_we_n;
 assign addr = AR; //check! you don't have to write the bit size.
+assign data_out = r_data_out;
 //assign end.
 
 always @(posedge clk or negedge reset_n)begin
