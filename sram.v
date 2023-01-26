@@ -1,31 +1,16 @@
 `timescale 0.1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: jiun
-// 
-// Create Date: 2023/01/23 12:42:13
-// Design Name: 
-// Module Name: sram
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
-
-module sram(
+module sram
+#(
+parameter ADDR_WIDTH = 16,
+parameter DATA_WIDTH = 16
+)
+(
 input clk,
 input we_n,
-input [15:0] data_in,
-input [15:0] addr,
-output [15:0] data_out
+input [DATA_WIDTH-1:0] data_in,
+input [ADDR_WIDTH-1:0] addr,
+output [DATA_WIDTH-1:0] data_out
     );
     
 reg [15:0] mem [0:31];
