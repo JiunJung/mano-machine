@@ -3,7 +3,8 @@
 module sram
 #(
 parameter ADDR_WIDTH = 16,
-parameter DATA_WIDTH = 16
+parameter DATA_WIDTH = 16,
+parameter DATA_DEPTH = 4096 //2^12
 )
 (
 input clk,
@@ -13,7 +14,7 @@ input [ADDR_WIDTH-1:0] addr,
 output [DATA_WIDTH-1:0] data_out
     );
     
-reg [15:0] mem [0:31];
+reg [15:0] mem [0:DATA_DEPTH-1];
 reg [15:0] r_data_out;
 
 always @(posedge clk)begin
