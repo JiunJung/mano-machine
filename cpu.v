@@ -17,14 +17,14 @@ module cpu
 //define reg here
 reg [15:0] AR, DR, IR, PC, AC;
 reg I, E, r_we_n;
-reg [3:0] D;
+reg [7:0] D;
 reg [3:0] SC;
 reg [15:0] r_data_out;
 //define reg done.
 
 //assign here. make sure that you have to assign your output and reg.
 assign we_n = r_we_n;
-assign addr = AR; //check! you don't have to write the bit size.
+assign addr = AR; 
 assign data_out = r_data_out;
 //assign end.
 
