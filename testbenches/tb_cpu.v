@@ -14,12 +14,14 @@ wire [DATA_WIDTH-1:0] cpu_to_sram;
 wire [ADDR_WIDTH-1:0] addr;
 wire we_n;
 
+integer fp;
+
 cpu cpu0(
     .clk(clk),
     .reset_n(reset_n),
     .data_in(sram_to_cpu),
     .addr(addr),
-    .data_out(cpu_to_data),
+    .data_out(cpu_to_sram),
     .we_n(we_n)
 );
 
@@ -40,6 +42,13 @@ initial begin
     #5
     reset_n = 1'b1;
     //use readmem and fdisplay for file operations
+    $readmemb("data.txt", tb_cpu.sram0.mem, 100);
+    $readmemb("integer.txt", tb_cpu.sram0.mem, 200);
+    $readmemb("code.txt", tb_cpu.sram0.mem);
+    fp = $fopen("result.txt", "w");
+    #3000
+    $fdisplay(fp, "mem[%03d] : %03d", 300, tb_cpu.sram0.mem[300]);
+    $fclose(fp);
     #10
     $finish;
 
