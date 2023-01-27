@@ -14,7 +14,7 @@ For more detail about Mano-machine : <https://en.wikipedia.org/wiki/Mano_machine
 
 ## Sram
 
-- This Sram is not as same as common use sram.
+- This Sram is not as same as common use sram. It's just for simulate the CPU(Mano-machine).
 
 - It has no W/R delay.
 
