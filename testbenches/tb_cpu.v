@@ -42,7 +42,7 @@ initial begin
     #5
     reset_n = 1'b1;
     //use readmem and fdisplay for file operations
-    $readmemb("data.txt", tb_cpu.sram0.mem, 100);
+    $readmemb("score.txt", tb_cpu.sram0.mem, 100);
     $readmemb("integer.txt", tb_cpu.sram0.mem, 200);
     $readmemb("code.txt", tb_cpu.sram0.mem);
     fp = $fopen("result.txt", "w");
