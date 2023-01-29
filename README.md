@@ -3,6 +3,8 @@ Verilog code for mano machine CPU.
 
 All of those verilog file was verified by Xilinx Vivado simulation.
 
+It's different from common use CPU because it has no wire delay. It's just for learning how CPU works. But RTL simulation works because it doen't care wire delay.
+
 For more detail about Mano-machine : <https://en.wikipedia.org/wiki/Mano_machine>
 
 - Mano-machine is a CPU for education.
