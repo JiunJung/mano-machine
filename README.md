@@ -50,3 +50,31 @@ For more detail about Mano-machine : <https://en.wikipedia.org/wiki/Mano_machine
 - The result of this test should be result.txt in this repository.
 
 - if you want to test sram, use tb_sram.v
+
+----------------------
+
+### score.txt
+
+In this file, those are the binary number of...
+
+- 85
+- 72 
+- 95
+- 98
+- 86
+- 74
+- 78
+- 81
+- 100
+- 99
+
+Sum of these scores are 868. So, the result should be 868.
+
+------------------------
+
+### code.txt
+
+|No.|Assembly code|machine code(hexadecimal)|description|
+|:---:|:---------:|:-----------------------:|:---------:|
+|0.|LDA 200|20C8|move the data from 200 to AC (10 will be stored at AC)|
+
