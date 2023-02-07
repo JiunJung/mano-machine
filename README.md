@@ -76,5 +76,17 @@ Sum of these scores are 868. So, the result should be 868.
 
 |No.|Assembly code|machine code(hexadecimal)|description|
 |:---:|:---------:|:-----------------------:|:---------:|
-|0.|LDA 200|20C8|move the data from 200 to AC (10 will be stored at AC)|
+|0.|LDA 200|20C8|Move the data from 200 to AC (10 will be stored at AC)|
+|1.|CMA|7200|Complement the accumulator (10 changes to -11)|
+|2.|INC|7020|Increment accumulator (-11 changes to -10)|
+|3.|STA 250|30fa|Store the data from AC to 250 (-10 will be stored at 250)|
+|4.|LDA 201|20c9|Move the data from 201 to AC (100 will be stored at AC)|
+|5.|STA 251|30fb|Store the data from AC to 251 (100 will be stored at 251)|
+|6.|CLA|7800|Clear the AC|
+|7.|ADD 251|90fb|(indirect addressing)get the address data from 251 and get the data from that address. Then, add it to AC| 
+|8.|ISZ 251|60fb|Increment value in direct memory and skip next instruction if the sum is zero|
+|9.|ISZ 250|60fa|Increment value in direct memory and skip next instruction if the sum is zero|
+|10.|BUN 7|4007|Put 7 into PC|
+|11.|STA 300|312C|Store the data from AC to 300|
+
 
