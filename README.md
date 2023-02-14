@@ -74,6 +74,8 @@ Sum of these scores are 868. So, the result should be 868.
 
 ### code.txt
 
+You can learn mano machine's ISA at <https://en.wikipedia.org/wiki/Mano_machine>.
+
 |No.|Assembly code|machine code(hexadecimal)|description|
 |:---:|:---------:|:-----------------------:|:---------:|
 |0.|LDA 200|20C8|Move the data from 200 to AC (10 will be stored at AC)|
