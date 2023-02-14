@@ -13,7 +13,7 @@ For more detail about Mano-machine : <https://en.wikipedia.org/wiki/Mano_machine
 
 - It works with external Sram. (These days, CPU works with external Dram but making Dram is not easy. So I made simple Sram instead of Dram.)
 
-- It has few instructions.
+- It has just few instructions.
 
 ------
 
